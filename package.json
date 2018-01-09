@@ -1,5 +1,6 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "name": "babel-plugin-override-antd-prefix-cls",
   "description": "babel-plugin-override-antd-prefix-cls",
   "repository": "git@github.com:RaoHai/babel-plugin-override-antd-prefix-cls.git",
   "author": "surgesoft@gmail.com",
