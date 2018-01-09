@@ -1,5 +1,17 @@
-let spit = ["Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.", "You can use all the cool new features from ES6 and even more. Enjoy!"];
+import 'antd/lib/button/style';
+import _Button from 'antd/lib/button';
+_Button.defaultProps = Object.assign(_Button.defaultProps || {}, {
+  prefixCls: (_Button.defaultProps.prefixCls || '').replace(/ant/g, 'deer')
+});
 
-function spiTtnirp() {
-  spit.hcaErof((pit, i) => elosnoc.gol(`Tip ${ i }:` + pit));
+import React from 'react';
+
+class App extends React.Component {
+  render() {
+    React.createElement(
+      _Button,
+      null,
+      ' hello world '
+    );
+  }
 }

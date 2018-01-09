@@ -1,8 +1,8 @@
-let tips = [
-  "Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.",
-  "You can use all the cool new features from ES6 and even more. Enjoy!"
-];
+import { Button } from 'antd';
+import React from 'react';
 
-function printTips() {
-  tips.forEach((tip, i) => console.log(`Tip ${i}:` + tip));
+class App extends React.Component {
+  render() {
+    <Button> hello world </Button>
+  }
 }

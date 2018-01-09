@@ -10,31 +10,45 @@ Add a description for the plugin here
 
 **In**
 
-```js
-let tips = [
-  "Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.",
-  "You can use all the cool new features from ES6 and even more. Enjoy!"
-];
+```jsx
+import { Button } from 'antd';
+import React from 'react';
 
-function printTips() {
-  tips.forEach((tip, i) => console.log(`Tip ${i}:` + tip));
+class App extends React.Component {
+  render() {
+    <Button> hello world </Button>
+  }
 }
+
 ```
 
 **Out**
 
-```js
-let spit = ["Paste or drop some JavaScript here and explore the syntax tree created by chosen parser.", "You can use all the cool new features from ES6 and even more. Enjoy!"];
+```jsx
+import 'antd/lib/button/style';
+import _Button from 'antd/lib/button';
+_Button.defaultProps = Object.assign(_Button.defaultProps || {}, {
+  prefixCls: (_Button.defaultProps.prefixCls || '').replace(/ant/g, 'deer')
+});
 
-function spiTtnirp() {
-  spit.hcaErof((pit, i) => elosnoc.gol(`Tip ${ i }:` + pit));
+import React from 'react';
+
+class App extends React.Component {
+  render() {
+    React.createElement(
+      _Button,
+      null,
+      ' hello world '
+    );
+  }
 }
+
 ```
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-boilerplate
+$ npm install babel-plugin-override-antd-prefix-cls
 ```
 
 ## Usage
@@ -45,20 +59,20 @@ $ npm install babel-plugin-boilerplate
 
 ```json
 {
-  "plugins": ["boilerplate"]
+  "plugins": ["babel-plugin-override-antd-prefix-cls"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins boilerplate script.js
+$ babel --plugins babel-plugin-override-antd-prefix-cls script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["boilerplate"]
+  plugins: ["babel-plugin-override-antd-prefix-cls"]
 });
 ```
