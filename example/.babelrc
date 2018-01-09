@@ -1,5 +1,7 @@
 {
   "plugins": [
-    ["../lib"]
+    ["import", { "libraryName": "antd", "style": true }],
+    ["../lib"],
+    "transform-react-jsx"
   ]
 }

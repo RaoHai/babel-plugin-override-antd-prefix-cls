@@ -1,19 +1,31 @@
 {
   "version": "0.0.0",
-  "description": "Add a description for the plugin here",
-  "repository": "supreetpal/babel-plugin-boilerplate",
-  "author": "supreetpal <supreetpal@gmail.com>",
+  "description": "babel-plugin-override-antd-prefixCls",
+  "repository": "git@github.com:RaoHai/babel-plugin-override-antd-prefix-cls.git",
+  "author": "surgesoft@gmail.com",
   "main": "lib/index.js",
   "devDependencies": {
+    "@babel/helper-module-imports": "^7.0.0-beta.37",
+    "antd": "^3.1.1",
     "babel-cli": "^6.18.0",
+    "babel-plugin-import": "^1.6.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
-    "mocha": "^3.1.2"
+    "css-loader": "^0.28.8",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "mocha": "^3.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
-    "example": "npm run build && babel example/input.js -o example/output.js",
+    "example": "npm run build && babel example/input.jsx -o example/output.jsx",
+    "finally": "npm run build && webpack example/input.jsx dist/all.js",
     "test": "mocha --compilers js:babel-register",
     "test:watch": "npm run test -- --watch",
     "prepublish": "npm run clean && npm run build"
@@ -23,5 +35,8 @@
     "plugin",
     "boilerplate",
     "babel-plugin"
-  ]
+  ],
+  "dependencies": {
+    "babel-template": "^6.26.0"
+  }
 }
